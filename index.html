@@ -6,38 +6,29 @@
     <title>Pergunte à foca</title>
 </head>
 <body>
-    <style>
-        body {
-            background: purple;
-            width: 20%;
-            margin: 0 auto;
-        }
-        button {
-            position: relative;
-            left: 40%;
-            margin: 10px auto;
-        }
-    </style>
-
     <h1>Pergunte à foca</h1>
 
     <img height = 380px src="https://imgs.search.brave.com/Vbc-l8v7KRuDgVNk2EEBoeqd4G0kkIIswCYht99hXEk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY1/Nzg4NTI5L3B0L3Zl/dG9yaWFsL3NvcnJp/ZGVudGUtcGVyc29u/YWdlbS1mb2NhLWRh/LWdyb2VubCVDMyVB/Mm5kaWEuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTg3b2ZX/LXlhbW5VQWt5aU0w/ZVJseVh5SExKdW9N/TkZRQThzQWdLVTRf/TWs9" alt="foca">
 
     <div><input type="text" class="input1"> ou <input type="text" class="input2"></div>
 
-    <button type='button'>Perguntar</button>
+    <button type='button' onclick="perguntou()">Perguntar</button>
 
     <script>
-        console.log(document.querySelector(".input2").value)
-        var botao = document.querySelector("button")
-
-        botao.addEventListener("click", (event) => {
+        function perguntou(){
             var escolha = Math.floor(Math.random() * 10);
             if (escolha%2)
                 alert("A foca escolheu "+document.querySelector(".input1").value)
             else
                 alert("A foca escolheu "+document.querySelector(".input2").value)
-        })
+        }
     </script>
+
+    <style>
+        body {
+            background: purple;
+            text-align: center;
+        }
+    </style>
 </body>
 </html>

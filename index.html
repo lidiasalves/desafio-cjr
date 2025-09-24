@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pergunte à foca</title>
+    <title>Pergunte à Foca</title>
+    <link rel="icon" href="assets/images/foca-icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/script.js" defer></script>
 </head>
 <body>
-    <h1>Pergunte à foca</h1>
+    <header class="header">
+        <h1 class="title">Pergunte à Foca</h1>
+        <p class="subtitle">a foca sábia vai escolher por você!</p>
+    </header>
 
-    <img height = 380px src="https://imgs.search.brave.com/Vbc-l8v7KRuDgVNk2EEBoeqd4G0kkIIswCYht99hXEk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTY1/Nzg4NTI5L3B0L3Zl/dG9yaWFsL3NvcnJp/ZGVudGUtcGVyc29u/YWdlbS1mb2NhLWRh/LWdyb2VubCVDMyVB/Mm5kaWEuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTg3b2ZX/LXlhbW5VQWt5aU0w/ZVJseVh5SExKdW9N/TkZRQThzQWdLVTRf/TWs9" alt="foca">
+    <main class="content">
+        <img class="foca-image" src="assets/images/foca.jpg" alt="Foquinha contente">
+        
+        <section class="input">
+            <div class="opcoes-container">
+                <input type="text" class="input1" placeholder="opção 1"> 
+                <span class="or-text">ou</span> 
+                <input type="text" class="input2" placeholder="opção 2">
+            </div>
+            <button class="ask-button" onclick="perguntou()">Perguntar</button>
+        </section>
+    </main>
 
-    <div><input type="text" class="input1"> ou <input type="text" class="input2"></div>
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-container">
+            <header class="modal-header">
+                <h3 class="modal-title">A Foca Decidiu!</h3>
+            </header>
+            <p id="modal-message" class="modal-message"></p>
+            <button class="modal-button" onclick="fecharModal()">Entendi!</button>
+        </div>
+    </div>
 
-    <button type='button' onclick="perguntou()">Perguntar</button>
-
-    <script>
-        function perguntou(){
-            var escolha = Math.floor(Math.random() * 10);
-            if (escolha%2)
-                alert("A foca escolheu "+document.querySelector(".input1").value)
-            else
-                alert("A foca escolheu "+document.querySelector(".input2").value)
-        }
-    </script>
-
-    <style>
-        body {
-            background: purple;
-            text-align: center;
-        }
-    </style>
 </body>
 </html>

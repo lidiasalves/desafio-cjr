@@ -62,6 +62,7 @@ body {
     box-shadow: 0 10px 30px rgba(30, 60, 114, 0.4);
     border: 3px solid rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease;
+    margin-bottom: 40px;
 }
 
 .foca-image:hover {
